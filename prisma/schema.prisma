@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+    output   = "./node_modules/@prisma/client"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Video {
+ id          String   @id @default(cuid())
+  publicId    String   @unique
+  title       String
+  description String?
+  url         String
+  originalSize String?
+  page        String   // Required field
+  createdAt   DateTime @default(now())
+}
