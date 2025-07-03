@@ -66,7 +66,7 @@ export default function AppLayout({
                 </div>
               </Link>
             </div>
-            <div className="flex-none flex items-center space-x-4">
+            <div className="flex-none flex items-center space-x-5">
               {user && (
                 <>
                   <div className="avatar">
