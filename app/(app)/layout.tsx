@@ -16,7 +16,6 @@ import {
 const sidebarItems = [
   { href: "/home", icon: LayoutDashboardIcon, label: "Home Page" },
   { href: "/social-share", icon: Share2Icon, label: "Social Share" },
-
 ];
 
 export default function AppLayout({

@@ -2,19 +2,19 @@ generator client {
   provider = "prisma-client-js"
     output   = "./node_modules/@prisma/client"
 }
-
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider = "sqlite"
+  url      = "file:./dev.db"
 }
 
 model Video {
  id          String   @id @default(cuid())
-  publicId    String   @unique
   title       String
   description String?
-  url         String
-  originalSize String?
-  page        String   // Required field
+    publicId    String  
+  originalSize String
+  compressedSize String
+  duration    Float
   createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }
